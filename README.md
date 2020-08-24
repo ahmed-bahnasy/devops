@@ -19,7 +19,6 @@ Your project goal is to operationalize this working, machine learning microservi
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
 
 **The final implementation of the project will showcase your abilities to operationalize production microservices.**
 
@@ -29,12 +28,22 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 * Create a virtualenv and activate it
 * Run `make install` to install the necessary dependencies
+* 'requirements.txt' : list of project dependencies to be installed.
 
+*'Dockerfile' : The Dockerfile contains all the commands a user could call on the command line to assemble an image.
+*'docker_out.txt' : Contain the output of two scripts " run_docker.sh"and "make_prediction.sh"
+*'upload_docker.sh' : script has commands to upload our built image to docker to be accessible to a Kubernets cluster.
+*'run_kubernetes.sh' : script to run our containerized application using kubectl.
+*'kubernetes.out.txt' : Contain the output of two scripts " run_kubernetes.sh " and "make_prediction.sh"
 ### Running `app.py`
 
 1. Standalone:  `python app.py`
 2. Run in Docker:  `./run_docker.sh`
+    'docker_out.txt' : contain the output 
 3. Run in Kubernetes:  `./run_kubernetes.sh`
+
+
+
 
 ### Kubernetes Steps
 
@@ -43,6 +52,5 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Create Flask app in Container
 * Run via kubectl
 
-[![ahmed-bahnasy](https://circleci.com/gh/ahmed-bahnasy/devops.svg?style=svg)](https://github.com/ahmed-bahnasy/devops/edit/master/README.md)
 
 
